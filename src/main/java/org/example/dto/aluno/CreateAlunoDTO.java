@@ -13,16 +13,14 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 public class CreateAlunoDTO {
-    private UUID id;
-
     @NotBlank(message = "O campo nome é obrigatório")
     private String nome;
 
     @NotBlank(message = "O campo sobrenome é obrigatório")
     private String sobrenome;
 
-    @Email(message = "Formato de email inválido")
-    @NotBlank(message = "O campo email é obrigatório")
+    @Email(message = "Formato de e-mail inválido")
+    @NotBlank(message = "O campo e-mail é obrigatório")
     private String email;
 
     @Size(min = 6, message = "A senha deve ter no mínimo 6 caracteres")
